@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chomp Food</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" autocomplete="on" required autofocus placeholder="Your Name">
-            <input type="email" id="email" autocomplete="on" required placeholder="Your mail">
-            <input type="tel" id="phone" autocomplete="on" required placeholder="your number" pattern="[0-9]{10}">
-            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <div class="upper_level">
+        <p>We're open and available for takeway & delivery. <a href="" class="order">Order Now</a></p>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                SecureToken : "2d5d8556-0107-48ed-847a-8fe8c2583d6c",
-                To : 'maliodas.dragon.sin07@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New Contact Form Enquiry",
-                Body : "Name: " + document.getElementById("name").value
-                    + "<br> Email: " + document.getElementById("email").value
-                    + "<br> Phone no: " + document.getElementById("phone").value
-                    + "<br> Message: " + document.getElementById("message").value
-            }).then(
-                message => alert("Message Sent Succesfully")
-            );
-
-        }
-    </script>
+    <div class="nav_bar">
+        <div class="side_log">
+            <img src="./img/photo_2022-11-04_00-25-02.jpg" alt="company log">
+        </div>
+        <div class="other_option">
+            <a href="">Home</a>
+            <a href="">Order</a>
+            <a href="">Company</a>
+            <a href="">FAQ</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
+    <div class="heading">
+        <div class="left_heading">
+            <h1>Beautiful food & takeaway, <span class="color-change"> delivered</span> to your door.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta tenetur doloremque, facilis aliquam fugit et reiciendis officia aliquid? Suscipit delectus corrupti facere ratione saepe exercitationem aperiam accusamus, expedita laborum veritatis!</p>
+            <button class="btn">Place an Order</button>
+            <img src="./img/trustpilot-logo.svg" alt="">
+            <p>4.8 out of 5 based on 2000+ reviews</p>
+        </div>
+        <div class="right_heading">
+            <img src="./img/5e865e09d8efa395f376b5c1_Hero Image.png" alt="food Image">
+        </div>
+    </div>
 </body>
 </html>
